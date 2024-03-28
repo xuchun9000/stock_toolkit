@@ -1,0 +1,6 @@
+C:\Users\xuchu\Downloads\StockToolkit\StockToolkit\StockToolkit.Model\bin\Debug\StockToolkit.Model.dll
+C:\Users\xuchu\Downloads\StockToolkit\StockToolkit\StockToolkit.Model\bin\Debug\StockToolkit.Model.pdb
+C:\Users\xuchu\Downloads\StockToolkit\StockToolkit\StockToolkit.Model\obj\Debug\StockToolkit.Model.csproj.AssemblyReference.cache
+C:\Users\xuchu\Downloads\StockToolkit\StockToolkit\StockToolkit.Model\obj\Debug\StockToolkit.Model.csproj.CoreCompileInputs.cache
+C:\Users\xuchu\Downloads\StockToolkit\StockToolkit\StockToolkit.Model\obj\Debug\StockToolkit.Model.dll
+C:\Users\xuchu\Downloads\StockToolkit\StockToolkit\StockToolkit.Model\obj\Debug\StockToolkit.Model.pdb

@@ -1,0 +1,9 @@
+C:\Users\xuchu\source\repos\StockToolkit\StockToolkit.StockService\bin\Debug\StockToolkit.StockService.dll
+C:\Users\xuchu\source\repos\StockToolkit\StockToolkit.StockService\bin\Debug\StockToolkit.StockService.pdb
+C:\Users\xuchu\source\repos\StockToolkit\StockToolkit.StockService\bin\Debug\StockToolkit.Model.dll
+C:\Users\xuchu\source\repos\StockToolkit\StockToolkit.StockService\bin\Debug\StockToolkit.Model.pdb
+C:\Users\xuchu\source\repos\StockToolkit\StockToolkit.StockService\obj\Debug\StockToolkit.StockService.csproj.AssemblyReference.cache
+C:\Users\xuchu\source\repos\StockToolkit\StockToolkit.StockService\obj\Debug\StockToolkit.StockService.csproj.CoreCompileInputs.cache
+C:\Users\xuchu\source\repos\StockToolkit\StockToolkit.StockService\obj\Debug\StockToo.0E871375.Up2Date
+C:\Users\xuchu\source\repos\StockToolkit\StockToolkit.StockService\obj\Debug\StockToolkit.StockService.dll
+C:\Users\xuchu\source\repos\StockToolkit\StockToolkit.StockService\obj\Debug\StockToolkit.StockService.pdb

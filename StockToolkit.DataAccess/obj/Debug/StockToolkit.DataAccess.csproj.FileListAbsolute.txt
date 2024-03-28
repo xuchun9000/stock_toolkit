@@ -1,0 +1,11 @@
+C:\Users\xuchu\Downloads\StockToolkit\StockToolkit\StockToolkit.DataAccess\bin\Debug\StockToolkit.DataAccess.dll
+C:\Users\xuchu\Downloads\StockToolkit\StockToolkit\StockToolkit.DataAccess\bin\Debug\StockToolkit.DataAccess.pdb
+C:\Users\xuchu\Downloads\StockToolkit\StockToolkit\StockToolkit.DataAccess\bin\Debug\Newtonsoft.Json.dll
+C:\Users\xuchu\Downloads\StockToolkit\StockToolkit\StockToolkit.DataAccess\bin\Debug\StockToolkit.Model.dll
+C:\Users\xuchu\Downloads\StockToolkit\StockToolkit\StockToolkit.DataAccess\bin\Debug\StockToolkit.Model.pdb
+C:\Users\xuchu\Downloads\StockToolkit\StockToolkit\StockToolkit.DataAccess\bin\Debug\Newtonsoft.Json.xml
+C:\Users\xuchu\Downloads\StockToolkit\StockToolkit\StockToolkit.DataAccess\obj\Debug\StockToolkit.DataAccess.csproj.AssemblyReference.cache
+C:\Users\xuchu\Downloads\StockToolkit\StockToolkit\StockToolkit.DataAccess\obj\Debug\StockToolkit.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\xuchu\Downloads\StockToolkit\StockToolkit\StockToolkit.DataAccess\obj\Debug\StockToo.BB54A119.Up2Date
+C:\Users\xuchu\Downloads\StockToolkit\StockToolkit\StockToolkit.DataAccess\obj\Debug\StockToolkit.DataAccess.dll
+C:\Users\xuchu\Downloads\StockToolkit\StockToolkit\StockToolkit.DataAccess\obj\Debug\StockToolkit.DataAccess.pdb

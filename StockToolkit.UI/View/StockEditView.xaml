@@ -1,0 +1,135 @@
+﻿<UserControl x:Class="StockToolkit.UI.View.StockEditView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:StockToolkit.UI.View"
+             xmlns:vm="clr-namespace:StockToolkit.UI.ViewModel"             
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="2"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Pause" Command="{Binding PauseCommand}" Padding="3"/>
+            <Button Content="Resume" Command="{Binding ResumeCommand}" Padding="3"/>
+            <Button Content="Restart" Command="{Binding RestartCommand}" Padding="3"/>
+            <Button Content="Show History" FontWeight="Bold" Command="{Binding ShowHistoryCommand}" Width="200" Padding="3"/>
+        </StackPanel>
+        <Canvas Grid.Row="2" Width="700" Height="400" Background="LightBlue">
+            <!--this itemsControl is to draw real time stock flow bar-->
+            <ItemsControl ItemsSource="{Binding StockBarViewModels}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Canvas/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemContainerStyle>
+                    <Style TargetType="ContentPresenter">
+                        <Setter Property="Canvas.Left" Value="{Binding BarLeft}"/>
+                        <Setter Property="Canvas.Top" Value="{Binding BarTop}"/>
+                    </Style>
+                </ItemsControl.ItemContainerStyle>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <!--StockEditViewModel.MouseEvents is an attached event
+                            which will bind the mouse move to ViewModel-->
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="2"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Rectangle
+                                Width="{Binding BarWidth}"
+                                Height="{Binding BarHeight}"
+                                Stroke="{Binding BarStrock}"
+                                Fill="{Binding BarStrock}"
+                                StrokeThickness="{Binding BarThickness}"
+                                HorizontalAlignment="Left">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="MouseEnter" >                                        
+                                        <i:CallMethodAction TargetObject="{Binding}" MethodName="HighlightBackground"/>
+                                    </i:EventTrigger>
+                                    <i:EventTrigger EventName="MouseLeave">
+                                        <i:CallMethodAction TargetObject="{Binding}" MethodName="ResetBackground"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </Rectangle>
+                            <TextBlock Text="{Binding BarText}" Grid.Row="2"/>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <!--this itemsControl is to draw y axis-->
+            <ItemsControl ItemsSource="{Binding YAxisLines}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Canvas/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemContainerStyle>
+                    <Style TargetType="ContentPresenter">
+                        <Setter Property="Canvas.Left" Value="{Binding BarLeft}"/>
+                        <Setter Property="Canvas.Top" Value="{Binding BarTop}"/>
+                    </Style>
+                </ItemsControl.ItemContainerStyle>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Rectangle 
+                                Width="{Binding BarWidth}"
+                                Height="{Binding BarHeight}"
+                                Stroke="{Binding BarStrock}"
+                                StrokeThickness="4" VerticalAlignment="Center"/>
+                            <TextBlock Grid.Column="2" Text="{Binding BarText}" VerticalAlignment="Top"/>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <!--this itemsControl is to draw x axis-->
+            <ItemsControl ItemsSource="{Binding XAxisLines}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Canvas/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemContainerStyle>
+                    <Style TargetType="ContentPresenter">
+                        <Setter Property="Canvas.Left" Value="{Binding BarLeft}"/>
+                        <Setter Property="Canvas.Top" Value="{Binding BarTop}"/>
+                    </Style>
+                </ItemsControl.ItemContainerStyle>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="2"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="2"/>
+                            </Grid.RowDefinitions>
+                            <Rectangle 
+                                Width="{Binding BarWidth}"
+                                Height="{Binding BarHeight}"
+                                Stroke="{Binding BarStrock}"
+                                StrokeThickness="4" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Row="2" Text="{Binding BarText}" HorizontalAlignment="Center"/>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Canvas>
+    </Grid>
+</UserControl>
